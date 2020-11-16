@@ -8,6 +8,9 @@
         ["OS=='win'", {
       	  "sources": [ "lib/windows.cc" ]
       	}],
+        ["OS=='linux'", {
+          "sources": [ "lib/linux.cc" ]
+        }],
         ["OS=='mac'", {
       	  "sources": [ "lib/macos.mm" ],
           "libraries": [ '-framework AppKit', '-framework ApplicationServices' ]

@@ -7,7 +7,7 @@ import { resolve } from 'path';
 
 let addon: any;
 
-if (platform() === "win32" || platform() === "darwin") {
+if (platform() === "win32" || platform() === "darwin" || platform() === "linux") {
   const ADDON_PATH = (process.env.NODE_ENV != "dev") ? "Release" : "Debug";
   addon = require(`node-gyp-build`)(resolve(__dirname, '..'));
 }

@@ -127,6 +127,8 @@ export class Window {
       return this.path && this.path !== "" && addon.isWindow(this.id);
     } else if (process.platform === "darwin") {
       return this.path && this.path !== "" && !!addon.initWindow(this.id);
+    } else if (process.platform === "linux") {
+      return this.path && this.path !== "" && addon.isWindow(this.id);
     }
   }
 
