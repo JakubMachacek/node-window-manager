@@ -50,7 +50,7 @@ export class Window {
       newBounds.height = Math.floor(newBounds.height * sf);
 
       addon.setWindowBounds(this.id, newBounds);
-    } else if (process.platform === "darwin") {
+    } else if (process.platform === "darwin" || process.platform === "linux") {
       addon.setWindowBounds(this.id, newBounds);
     }
   }
@@ -82,6 +82,8 @@ export class Window {
       addon.showWindow(this.id, "minimize");
     } else if (process.platform === "darwin") {
       addon.setWindowMinimized(this.id, true);
+    } else if (process.platform === "linux") {
+      addon.setWindowMinimized(this.id, true);
     }
   }
 
@@ -101,6 +103,8 @@ export class Window {
     if (process.platform === "win32") {
       addon.showWindow(this.id, "maximize");
     } else if (process.platform === "darwin") {
+      addon.setWindowMaximized(this.id);
+    } else if (process.platform === "linux") {
       addon.setWindowMaximized(this.id);
     }
   }
