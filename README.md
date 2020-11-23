@@ -1,6 +1,6 @@
 # node-window-manager
 
-Manage windows in Windows, macOS and ~~Linux~~(WIP)
+Manage windows in Windows, macOS and Linux
 
 # Install
 
